@@ -16,7 +16,7 @@ public class Order {
         Scanner scanner = new Scanner(System.in);
         String code = "";
 
-        System.out.println("                                  --- Menu Reference ---");
+        System.out.println("                             --- Menu Reference ---");
         menu.displayMenu();
         System.out.println("\nType the item code (like m1 or d2). Type 'x' to finish your order.");
 
@@ -33,13 +33,13 @@ public class Order {
             }
             scanner.nextLine();
             if (code.equals("m1")) {
-                System.out.println(menu.getFoods()[0].getName() + " is chosen.");
+                System.out.println("m1      Adobong Manok is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         foodQty[0] += qty;
-                        System.out.println(menu.getFoods()[0].getName() + " is added.");
+                        System.out.println("m1 "+ menu.getFoods()[0].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -48,13 +48,13 @@ public class Order {
                     scanner.next();
                 }
             } else if (code.equals("m2")) {
-                System.out.println(menu.getFoods()[1].getName() + " is chosen.");
+                System.out.println("m2      Sinigang na Baboy is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         foodQty[1] += qty;
-                        System.out.println(menu.getFoods()[1].getName() + " is added.");
+                        System.out.println("m2 "+ menu.getFoods()[1].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -63,13 +63,13 @@ public class Order {
                     scanner.next();
                 }
             } else if (code.equals("m3")) {
-                System.out.println(menu.getFoods()[2].getName() + " is chosen.");
+                System.out.println("m3      Paksiw na Bangus is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         foodQty[2] += qty;
-                        System.out.println(menu.getFoods()[2].getName() + " is added.");
+                        System.out.println("m3 "+ menu.getFoods()[2].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -78,13 +78,13 @@ public class Order {
                     scanner.next();
                 }
             } else if (code.equals("m4")) {
-                System.out.println(menu.getFoods()[3].getName() + " is chosen.");
+                System.out.println("m4      Fried Galunggong is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         foodQty[3] += qty;
-                        System.out.println(menu.getFoods()[3].getName() + " is added.");
+                        System.out.println("m4 "+ menu.getFoods()[3].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -93,13 +93,13 @@ public class Order {
                     scanner.next();
                 }
             } else if (code.equals("m5")) {
-                System.out.println(menu.getFoods()[4].getName() + " is chosen.");
+                System.out.println("m5      Bicol Express is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         foodQty[4] += qty;
-                        System.out.println(menu.getFoods()[4].getName() + " is added.");
+                        System.out.println("m5 "+ menu.getFoods()[4].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -110,13 +110,13 @@ public class Order {
             }
 
             else if (code.equals("m6")) {
-                System.out.println(menu.getFoods()[5].getName() + " is chosen.");
+                System.out.println("m6      Rice is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         foodQty[5] += qty;
-                        System.out.println(menu.getFoods()[5].getName() + " is added.");
+                        System.out.println("m6 "+ menu.getFoods()[5].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -127,13 +127,13 @@ public class Order {
             }
 
             else if (code.equals("d1")) {
-                System.out.println(menu.getFoods()[0].getName() + " is chosen.");
+                System.out.println("d1      Sprite (bottle) is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         drinkQty[0] += qty;
-                        System.out.println(menu.getDrinks()[0].getName() + " is added.");
+                        System.out.println("d1 "+ menu.getDrinks()[0].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -141,14 +141,16 @@ public class Order {
                     System.out.println("Invalid input.");
                     scanner.next();
                 }
-            } else if (code.equals("d2")) {
-                System.out.println(menu.getFoods()[1].getName() + " is chosen.");
+            }
+
+            else if (code.equals("d2")) {
+                System.out.println("d2      Coke (bottle) is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         drinkQty[1] += qty;
-                        System.out.println(menu.getDrinks()[1].getName() + " is added.");
+                        System.out.println("d2 "+ menu.getDrinks()[1].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
@@ -156,14 +158,16 @@ public class Order {
                     System.out.println("Invalid input.");
                     scanner.next();
                 }
-            } else if (code.equals("d3")) {
-                System.out.println(menu.getFoods()[2].getName() + " is chosen.");
+            }
+            
+            else if (code.equals("d3")) {
+                System.out.println("d3      Royal (bottle) is chosen.");
                 System.out.print("Enter quantity: ");
                 if (scanner.hasNextInt()) {
                     int qty = scanner.nextInt();
                     if (qty >= 0) {
                         drinkQty[2] += qty;
-                        System.out.println(menu.getDrinks()[2].getName() + " is added.");
+                        System.out.println("d3 "+ menu.getDrinks()[2].getName() + " is added.");
                     } else {
                         System.out.println("Quantity must be positive.");
                     }
