@@ -1,23 +1,54 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu();
         clearscreen cls = new clearscreen();
+        DeleteOrder deleterOrder = new DeleteOrder();
         ArrayList<Order> allOrders = new ArrayList<>();
         int orderCount = 0;
-        System.out.println("                   === Welcome to Kaon ta Bai ^_^ Billing System ===");
+        
+        System.out.println();
+        System.out.println("        #    #                                                      #             ");
+        System.out.println("        #   #    ##   # #    #   ##   #    #     #    # #           #   ##   #   #");
+        System.out.println("        #  #    #  #  # ##   #  #  #  ##   #     ##   # #           #  #  #   # # ");
+        System.out.println("        ###    #    # # # #  # #    # # #  #     # #  # #           # #    #   #  ");
+        System.out.println("        #  #   ###### # #  # # ###### #  # #     #  # # #     #     # ######   #  ");
+        System.out.println("        #   #  #    # # #   ## #    # #   ##     #   ## #     #     # #    #   #  ");
+        System.out.println("        #    # #    # # #    # #    # #    #     #    # #      #####  #    #   #  ");
+        System.out.println();
+        System.out.println("                   === Welcome to Kainan ni Jay Billing System ===");
+        System.out.println("                            By: Baran, Estopacia and Mendoza");
+
+        System.out.println();
+        System.out.println();
+
         System.out.print("Please enter your name: ");
         String name = scanner.nextLine().trim();
         String choice = "";
+        cls.clearScreen();
+
+        System.out.println();
+        System.out.println("        #    #                                                      #             ");
+        System.out.println("        #   #    ##   # #    #   ##   #    #     #    # #           #   ##   #   #");
+        System.out.println("        #  #    #  #  # ##   #  #  #  ##   #     ##   # #           #  #  #   # # ");
+        System.out.println("        ###    #    # # # #  # #    # # #  #     # #  # #           # #    #   #  ");
+        System.out.println("        #  #   ###### # #  # # ###### #  # #     #  # # #     #     # ######   #  ");
+        System.out.println("        #   #  #    # # #   ## #    # #   ##     #   ## #     #     # #    #   #  ");
+        System.out.println("        #    # #    # # #    # #    # #    #     #    # #      #####  #    #   #  ");
+        System.out.println();
+        System.out.println("                   === Welcome to Kainan ni Jay Billing System ===");
+        System.out.println("                            By: Baran, Estopacia and Mendoza");
+
         while (true) {
             System.out.println("\nHello, " + name + "! What do you want to do?");
             System.out.println("1. Make an Order");
             System.out.println("2. View Orders");
             System.out.println("3. Update Order");
-            System.out.println("4. Exit");
+            System.out.println("4. Delete an Order");
+            System.out.println("5. Exit");
             System.out.print("Enter choice (1-4): ");
             choice = scanner.nextLine().trim();
             if (choice.length() > 0) {
@@ -80,7 +111,11 @@ public class Main {
                         System.out.println("Invalid input. Must be a number.");
                     }
                 }
-            } else if (choice.equals("4")) {
+            }
+            else if (choice.equals("4")) {
+                DeleteOrder.deleteOrder(allOrders, scanner);
+            }
+            else if (choice.equals("5")) {
                 System.out.println("Goodbye, " + name + "!");
                 System.exit(0);
             }
